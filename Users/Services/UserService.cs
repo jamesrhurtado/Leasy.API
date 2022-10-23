@@ -19,21 +19,37 @@ public class UserService: IUserService
     
     public async Task<IEnumerable<User>> ListAsync()
     {
-        throw new NotImplementedException();
+        return await _userRepository.ListAsync();
     }
 
     public async Task<User> GetByIdAsync(int id)
     {
-        throw new NotImplementedException();
+        var user = await _userRepository.FindByIdAsync(id);
+        if (user == null) throw new KeyNotFoundException("User not found");
+        return user;
     }
 
     public async Task DeleteAsync(int id)
     {
-        throw new NotImplementedException();
+        var user = GetById(id);
+
+        try
+        {
+            _userRepository.Remove(user);
+            await _unitOfWork.CompleteAsync();
+        }
+        catch (Exception e)
+        {
+            //throw new AppException($"An error occurred while deleting the user: {e.Message}");
+        }
     }
 
-    public async Task<UserResponse> FindById(int id)
+    
+    //Helper function
+    private User GetById(int id)
     {
-        throw new NotImplementedException();
+        var user = _userRepository.FindById(id);
+        if (user == null) throw new KeyNotFoundException("User not found");
+        return user;
     }
 }

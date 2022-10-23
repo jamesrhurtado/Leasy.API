@@ -8,5 +8,6 @@ public interface IUserService
     Task<IEnumerable<User>> ListAsync();
     Task<User> GetByIdAsync(int id);
     Task DeleteAsync(int id);
-    Task<UserResponse> FindById(int id);
+    
+    //three are missing and will be implemented with security features
 }
