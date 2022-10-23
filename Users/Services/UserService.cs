@@ -1,4 +1,5 @@
-﻿using Leasy.API.Shared.Domain.Repositories;
+﻿using Leasy.API.Security.Domain.Services.Communication;
+using Leasy.API.Shared.Domain.Repositories;
 using Leasy.API.Users.Domain.Models;
 using Leasy.API.Users.Domain.Repositories;
 using Leasy.API.Users.Domain.Services;
@@ -16,7 +17,12 @@ public class UserService: IUserService
         _userRepository = userRepository;
         _unitOfWork = unitOfWork;
     }
-    
+
+    public async Task<AuthenticateResponse> Authenticate(AuthenticateRequest request)
+    {
+        throw new NotImplementedException();
+    }
+
     public async Task<IEnumerable<User>> ListAsync()
     {
         return await _userRepository.ListAsync();
@@ -27,6 +33,16 @@ public class UserService: IUserService
         var user = await _userRepository.FindByIdAsync(id);
         if (user == null) throw new KeyNotFoundException("User not found");
         return user;
+    }
+
+    public async Task RegisterAsync(RegisterRequest request)
+    {
+        throw new NotImplementedException();
+    }
+
+    public async Task UpdateAsync(int id, UpdateRequest request)
+    {
+        throw new NotImplementedException();
     }
 
     public async Task DeleteAsync(int id)
