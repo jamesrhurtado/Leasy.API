@@ -47,11 +47,17 @@ builder.Services.AddSwaggerGen(options =>
 
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 
-builder.Services.AddDbContext<AppDbContext>(
-    options => options.UseMySQL(connectionString)
-        .LogTo(Console.WriteLine, LogLevel.Information)
-        .EnableSensitiveDataLogging()
-        .EnableDetailedErrors());
+// Database Connection with Sensitive and Detailed Information and Errors enabled
+
+//builder.Services.AddDbContext<AppDbContext>(
+//    options => options.UseMySQL(connectionString)
+//        .LogTo(Console.WriteLine, LogLevel.Information)
+//        .EnableSensitiveDataLogging()
+//        .EnableDetailedErrors());
+
+// Database Connection with Standard Level for Information and Errors
+
+builder.Services.AddDbContext<AppDbContext>(options => options.UseMySQL(connectionString));
 
 // Add lowercase routes
 
