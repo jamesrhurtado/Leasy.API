@@ -1,3 +1,7 @@
+using Leasy.API.Security.Authorization.Handlers.Implementations;
+using Leasy.API.Security.Authorization.Handlers.Interfaces;
+using Leasy.API.Security.Authorization.Middleware;
+using Leasy.API.Security.Authorization.Settings;
 using Leasy.API.Shared.Domain.Repositories;
 using Leasy.API.Shared.Persistence.Contexts;
 using Leasy.API.Shared.Persistence.Repositories;
@@ -16,6 +20,14 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
+
+// Add CORS service
+
+builder.Services.AddCors();
+
+// AppSettings Configuration
+
+builder.Services.Configure<AppSettings>(builder.Configuration.GetSection("AppSettings"));
 
 builder.Services.AddSwaggerGen(options =>
 {
@@ -66,18 +78,43 @@ builder.Services.AddRouting(options =>
 
 // Dependency Injection Configuration
 
+// Shared Injection Configuration
+
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+
+// User Injection Configuration
+
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IUserService, UserService>();
-builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+
+// Security Injection Configuration
+builder.Services.AddScoped<IJwtHandler, JwtHandler>();
+
 
 // AutoMapper Configuration
 
 builder.Services.AddAutoMapper(
-    typeof(ModelToResourceProfile),
-    typeof(ResourceToModelProfile));
+    typeof(Leasy.API.Users.Mapping.ModelToResourceProfile),
+    typeof(Leasy.API.Users.Mapping.ResourceToModelProfile));
 
 
 var app = builder.Build();
+
+// Configure CORS
+
+app.UseCors(x => x
+    .AllowAnyOrigin()
+    .AllowAnyMethod()
+    .AllowAnyHeader());
+
+
+// Configure Error Handler Middleware
+
+app.UseMiddleware<ErrorHandlerMiddleware>();
+
+// Configure JWT Handling Middleware
+
+app.UseMiddleware<JwtMiddleware>();
 
 // Validation for ensuring Database Objects are created
 
