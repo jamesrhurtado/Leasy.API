@@ -7,7 +7,6 @@ using Leasy.API.Shared.Persistence.Contexts;
 using Leasy.API.Shared.Persistence.Repositories;
 using Leasy.API.Users.Domain.Repositories;
 using Leasy.API.Users.Domain.Services;
-using Leasy.API.Users.Mapping;
 using Leasy.API.Users.Persistence.Repositories;
 using Leasy.API.Users.Services;
 using Microsoft.EntityFrameworkCore;
