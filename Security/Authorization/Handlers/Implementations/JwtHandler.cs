@@ -5,6 +5,7 @@ using Leasy.API.Security.Authorization.Handlers.Interfaces;
 using Leasy.API.Security.Authorization.Settings;
 using Leasy.API.Shared.Persistence.Contexts;
 using Leasy.API.Users.Domain.Models;
+using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 
 namespace Leasy.API.Security.Authorization.Handlers.Implementations;
@@ -13,9 +14,9 @@ public class JwtHandler: IJwtHandler
 {
     private readonly AppSettings _appSettings;
 
-    public JwtHandler(AppSettings appSettings)
+    public JwtHandler(IOptions<AppSettings> appSettings)
     {
-        _appSettings = appSettings;
+        _appSettings = appSettings.Value;
     }
     public string GenerateToken(User user)
     {
@@ -49,6 +50,36 @@ public class JwtHandler: IJwtHandler
 
     public int? ValidateToken(string token)
     {
-        throw new NotImplementedException();
+        if (string.IsNullOrEmpty(token))
+            return null;
+        
+        var tokenHandler = new JwtSecurityTokenHandler();
+
+        var key = Encoding.ASCII.GetBytes(_appSettings.Secret);
+        // Execute Token Validation
+
+        try
+        {
+            tokenHandler.ValidateToken(token, new TokenValidationParameters
+            {
+                ValidateIssuerSigningKey = true,
+                IssuerSigningKey = new SymmetricSecurityKey(key),
+                ValidateIssuer = false,
+                ValidateAudience = false,
+                // Expiration with no delay
+                ClockSkew = TimeSpan.Zero
+            }, out var validatedToken);
+
+            var jwtToken = (JwtSecurityToken)validatedToken;
+            var userId = int.Parse(jwtToken.Claims.First(
+                claim => claim.Type == ClaimTypes.Sid).Value);
+            return userId;
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            return null;
+        }
+        
     }
 }
