@@ -12,6 +12,4 @@ public interface IUserService
     Task RegisterAsync(RegisterRequest request);
     Task UpdateAsync(int id, UpdateRequest request);
     Task DeleteAsync(int id);
-    
-    //three are missing and will be implemented with security features
 }
