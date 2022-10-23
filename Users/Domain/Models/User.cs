@@ -1,4 +1,6 @@
-﻿namespace Leasy.API.Users.Domain.Models;
+﻿using System.Text.Json.Serialization;
+
+namespace Leasy.API.Users.Domain.Models;
 
 public class User
 {
@@ -6,7 +8,7 @@ public class User
     public string Name { get; set; }
     public string LastName { get; set; }
     public string Email { get; set; }
-    //[JsonIgnore]
+    [JsonIgnore]
     public string PasswordHash { get; set; }
     
     //Relationships

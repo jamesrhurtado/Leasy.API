@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Leasy.API.Security.Domain.Services.Communication;
 using Leasy.API.Users.Domain.Models;
 using Leasy.API.Users.Resources;
 
@@ -8,6 +9,8 @@ public class ModelToResourceProfile : Profile
 {
     public ModelToResourceProfile()
     {
+        
+        CreateMap<User, AuthenticateResponse>();
         CreateMap<User, UserResource>();
     }
     
