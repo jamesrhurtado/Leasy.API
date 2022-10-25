@@ -7,7 +7,6 @@ using Leasy.API.Shared.Persistence.Contexts;
 using Leasy.API.Users.Domain.Models;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
-
 namespace Leasy.API.Security.Authorization.Handlers.Implementations;
 
 public class JwtHandler: IJwtHandler
