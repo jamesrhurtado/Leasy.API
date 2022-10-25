@@ -1,4 +1,6 @@
 ﻿using AutoMapper;
+using Leasy.API.Security.Authorization.Attributes;
+using Leasy.API.Security.Domain.Services.Communication;
 using Leasy.API.Users.Domain.Models;
 using Leasy.API.Users.Domain.Services;
 using Leasy.API.Users.Resources;
@@ -12,10 +14,26 @@ public class UsersController: ControllerBase
     private readonly IUserService _userService;
     private readonly IMapper _mapper;
 
-    private UsersController(IUserService userService, IMapper mapper)
+    public UsersController(IUserService userService, IMapper mapper)
     {
         _userService = userService;
         _mapper = mapper;
+    }
+    
+    [AllowAnonymous]
+    [HttpPost("sign-in")]
+    public async Task<IActionResult> AuthenticateAsync(AuthenticateRequest request)
+    {
+        var response = await _userService.Authenticate(request);
+        return Ok(response);
+    }
+
+    [AllowAnonymous]
+    [HttpPost("sign-up")]
+    public async Task<IActionResult> RegisterAsync(RegisterRequest request)
+    {
+        await _userService.RegisterAsync(request);
+        return Ok(new { message = "Registration successful" });
     }
 
     [HttpGet]
@@ -33,6 +51,14 @@ public class UsersController: ControllerBase
         var resource = _mapper.Map<User, UserResource>(user);
         return Ok(resource);
     }
+    
+    [HttpPut("{id}")]
+    public async Task<IActionResult> UpdateAsync(int id, UpdateRequest request)
+    {
+        await _userService.UpdateAsync(id, request);
+        return Ok(new { message = "User updated successfully" });
+    }
+
     
     [HttpDelete("{id}")]
     public async Task<IActionResult> DeleteAsync(int id)
