@@ -5,7 +5,9 @@
     <projectFile profileName="Leasy.API">Leasy.API.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30523737-2344-462a-941d-bd175a3663aa" name="Changes" comment="" />
+    <list default="true" id="30523737-2344-462a-941d-bd175a3663aa" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Leasy.API/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Leasy.API/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -77,7 +79,7 @@
       <workItem from="1666294427045" duration="1431000" />
       <workItem from="1666400220484" duration="3681000" />
       <workItem from="1666463087351" duration="10918000" />
-      <workItem from="1666737141210" duration="1944000" />
+      <workItem from="1666737141210" duration="2555000" />
     </task>
     <servers />
   </component>
