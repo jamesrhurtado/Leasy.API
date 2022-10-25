@@ -66,7 +66,26 @@ public class UserService: IUserService
 
     public async Task RegisterAsync(RegisterRequest request)
     {
-        throw new NotImplementedException();
+        // Validate
+        if (_userRepository.ExistsByEmail(request.Email))
+            throw new AppException($"Username '{request.Email}' is already taken");
+        
+        // Map request to user entity
+        var user = _mapper.Map<User>(request);
+        
+        // Hash password
+        user.PasswordHash = BCryptNet.HashPassword(request.Password);
+        
+        // Save User
+        try
+        {
+            await _userRepository.AddAsync(user);
+            await _unitOfWork.CompleteAsync();
+        }
+        catch (Exception e)
+        {
+            throw new AppException($"An error occurred while saving the user: {e.Message}");
+        }
     }
 
     public async Task UpdateAsync(int id, UpdateRequest request)
