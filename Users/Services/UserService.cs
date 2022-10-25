@@ -68,7 +68,7 @@ public class UserService: IUserService
     {
         // Validate
         if (_userRepository.ExistsByEmail(request.Email))
-            throw new AppException($"Username '{request.Email}' is already taken");
+            throw new AppException($"The email '{request.Email}' is already taken");
         
         // Map request to user entity
         var user = _mapper.Map<User>(request);
@@ -90,7 +90,31 @@ public class UserService: IUserService
 
     public async Task UpdateAsync(int id, UpdateRequest request)
     {
-        throw new NotImplementedException();
+        var user = GetById(id);
+        
+        // Validate
+        var userWithUsername = await _userRepository.FindByEmailAsync(request.Email);
+
+        if (userWithUsername != null && userWithUsername.Id != user.Id)
+            throw new AppException($"Email '{request.Email}' is already taken");
+        
+        // Hash Password if it was entered
+        if (!string.IsNullOrEmpty(request.Password))
+            user.PasswordHash = BCryptNet.HashPassword(request.Password);
+        
+        // Map request to entity
+        _mapper.Map(request, user);
+        
+        // Save User
+        try
+        {
+            _userRepository.Update(user);
+            await _unitOfWork.CompleteAsync();
+        }
+        catch (Exception e)
+        {
+            throw new AppException($"An error occurred while updating the user: {e.Message}");
+        }
     }
 
     public async Task DeleteAsync(int id)
