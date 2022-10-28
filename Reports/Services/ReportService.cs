@@ -24,7 +24,13 @@ public class ReportService: IReportService
 
     public async Task<ReportResponse> GetById(int id)
     {
-        throw new NotImplementedException();
+        var existingReport = _reportRepository.FindByIdAsync(id);
+        if (existingReport.Result == null)
+        {
+            return new ReportResponse("The report does not exist.");   
+        }
+
+        return new ReportResponse(existingReport.Result);
     }
 
     public async Task<ReportResponse> SaveAsync(Report report)
@@ -79,8 +85,6 @@ public class ReportService: IReportService
         {
             return new ReportResponse($"An error occurred while updating the report: {e.Message}");
         }
-        
-
     }
 
     public async Task<ReportResponse> DeleteAsync(int id)

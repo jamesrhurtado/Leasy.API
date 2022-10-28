@@ -1,4 +1,5 @@
 ﻿using System.Text.Json.Serialization;
+using Leasy.API.Reports.Domain.Models;
 
 namespace Leasy.API.Users.Domain.Models;
 
@@ -12,5 +13,5 @@ public class User
     public string PasswordHash { get; set; }
     
     //Relationships
-    //reports
+    public IList<Report> Reports { get; set; }
 }
