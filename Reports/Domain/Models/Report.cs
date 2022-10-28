@@ -11,7 +11,7 @@ public class Report
     public string RateType { get; set; }
     public decimal RateValue { get; set; }
     public string Capitalization { get; set; }
-    public decimal BuybackRate { get; set; }
+    public decimal BuybackPercentage { get; set; }
     public decimal NotaryFees { get; set; }
     public decimal RegistryFees { get; set; }
     public decimal Valuation { get; set; }
