@@ -5,13 +5,7 @@
     <projectFile profileName="Leasy.API">Leasy.API.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30523737-2344-462a-941d-bd175a3663aa" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Reports/Domain/Services/Communication/ReportResponse.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Reports/Domain/Services/IReportService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Reports/Resources/ReportResource.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Reports/Resources/SaveReportResource.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Leasy.API/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Leasy.API/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="30523737-2344-462a-941d-bd175a3663aa" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -86,7 +80,7 @@
       <workItem from="1666737141210" duration="3673000" />
       <workItem from="1666834026941" duration="910000" />
       <workItem from="1666889276388" duration="665000" />
-      <workItem from="1666910071425" duration="4386000" />
+      <workItem from="1666910071425" duration="4772000" />
     </task>
     <servers />
   </component>
