@@ -58,6 +58,7 @@ public class AppDbContext: DbContext
         builder.Entity<Report>().Property(p => p.DiscountRateKs);
         builder.Entity<Report>().Property(p => p.DiscountRateWacc);
         
+        
         // Apply Snake Case Naming Conventions
         
         builder.UseSnakeCaseNamingConvention();
