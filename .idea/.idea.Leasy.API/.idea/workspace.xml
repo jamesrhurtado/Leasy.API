@@ -6,8 +6,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="30523737-2344-462a-941d-bd175a3663aa" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Reports/Persistence/Repositories/ReportRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shared/Persistence/Contexts/AppDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Shared/Persistence/Contexts/AppDbContext.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Reports/Controllers/ReportsController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Leasy.API/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Leasy.API/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +84,7 @@
       <workItem from="1666834026941" duration="910000" />
       <workItem from="1666889276388" duration="665000" />
       <workItem from="1666910071425" duration="6851000" />
-      <workItem from="1666972140101" duration="905000" />
+      <workItem from="1666972140101" duration="2921000" />
     </task>
     <servers />
   </component>
