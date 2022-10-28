@@ -55,8 +55,8 @@ public class AppDbContext: DbContext
         builder.Entity<Report>().Property(p => p.ActivationCommission);
         builder.Entity<Report>().Property(p => p.RegularCommission);
         builder.Entity<Report>().Property(p => p.RiskInsurancePercentage);
-        builder.Entity<Report>().Property(p => p.DiscountRateKs);
-        builder.Entity<Report>().Property(p => p.DiscountRateWacc);
+        builder.Entity<Report>().Property(p => p.DiscountRateKs).IsRequired();
+        builder.Entity<Report>().Property(p => p.DiscountRateWacc).IsRequired();
         
         
         // Apply Snake Case Naming Conventions

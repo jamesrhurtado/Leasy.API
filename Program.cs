@@ -1,3 +1,7 @@
+using Leasy.API.Reports.Domain.Repositories;
+using Leasy.API.Reports.Domain.Services;
+using Leasy.API.Reports.Persistence.Repositories;
+using Leasy.API.Reports.Services;
 using Leasy.API.Security.Authorization.Handlers.Implementations;
 using Leasy.API.Security.Authorization.Handlers.Interfaces;
 using Leasy.API.Security.Authorization.Middleware;
@@ -85,6 +89,8 @@ builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<IReportRepository, ReportRepository>();
+builder.Services.AddScoped<IReportService, ReportService>();
 
 // Security Injection Configuration
 builder.Services.AddScoped<IJwtHandler, JwtHandler>();
@@ -94,7 +100,9 @@ builder.Services.AddScoped<IJwtHandler, JwtHandler>();
 
 builder.Services.AddAutoMapper(
     typeof(Leasy.API.Users.Mapping.ModelToResourceProfile),
-    typeof(Leasy.API.Users.Mapping.ResourceToModelProfile));
+    typeof(Leasy.API.Users.Mapping.ResourceToModelProfile),
+    typeof(Leasy.API.Reports.Mapping.ResourceToModelProfile),
+    typeof(Leasy.API.Reports.Mapping.ResourceToModelProfile));
 
 
 var app = builder.Build();
