@@ -58,21 +58,21 @@ public class ReportService: IReportService
         }
 
         existingReport.AssetPrice = report.AssetPrice;
-        existingReport.LeasingTime = report.LeasingTime;
+        existingReport.LeasingYears = report.LeasingYears;
         existingReport.PaymentFrequency = report.PaymentFrequency;
         existingReport.RateType = report.RateType;
         existingReport.RateValue = report.RateValue;
         existingReport.Capitalization = report.Capitalization;
-        existingReport.BuybackPercentage = report.BuybackPercentage;
+        existingReport.Buyback = report.Buyback;
         existingReport.NotaryFees = report.NotaryFees;
         existingReport.RegistryFees = report.RegistryFees;
         existingReport.Valuation = report.Valuation;
         existingReport.StudyCommission = report.StudyCommission;
         existingReport.ActivationCommission = report.ActivationCommission;
         existingReport.RegularCommission = report.RegularCommission;
-        existingReport.RiskInsurancePercentage = report.RiskInsurancePercentage;
-        existingReport.DiscountRateKs = report.DiscountRateKs;
-        existingReport.DiscountRateWacc = report.DiscountRateWacc;
+        existingReport.RiskInsurance = report.RiskInsurance;
+        existingReport.RateKs = report.RateKs;
+        existingReport.RateWacc = report.RateWacc;
 
         try
         {

@@ -42,21 +42,21 @@ public class AppDbContext: DbContext
         builder.Entity<Report>().HasKey(p => p.Id);
         builder.Entity<Report>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
         builder.Entity<Report>().Property(p => p.AssetPrice).IsRequired();
-        builder.Entity<Report>().Property(p => p.LeasingTime).IsRequired();
+        builder.Entity<Report>().Property(p => p.LeasingYears).IsRequired();
         builder.Entity<Report>().Property(p => p.PaymentFrequency).IsRequired();
         builder.Entity<Report>().Property(p => p.RateType).IsRequired();
         builder.Entity<Report>().Property(p => p.RateValue).IsRequired();
         builder.Entity<Report>().Property(p => p.Capitalization);
-        builder.Entity<Report>().Property(p => p.BuybackPercentage);
+        builder.Entity<Report>().Property(p => p.Buyback);
         builder.Entity<Report>().Property(p => p.NotaryFees);
         builder.Entity<Report>().Property(p => p.RegistryFees);
         builder.Entity<Report>().Property(p => p.Valuation);
         builder.Entity<Report>().Property(p => p.StudyCommission);
         builder.Entity<Report>().Property(p => p.ActivationCommission);
         builder.Entity<Report>().Property(p => p.RegularCommission);
-        builder.Entity<Report>().Property(p => p.RiskInsurancePercentage);
-        builder.Entity<Report>().Property(p => p.DiscountRateKs).IsRequired();
-        builder.Entity<Report>().Property(p => p.DiscountRateWacc).IsRequired();
+        builder.Entity<Report>().Property(p => p.RiskInsurance);
+        builder.Entity<Report>().Property(p => p.RateKs).IsRequired();
+        builder.Entity<Report>().Property(p => p.RateWacc).IsRequired();
         
         
         // Apply Snake Case Naming Conventions

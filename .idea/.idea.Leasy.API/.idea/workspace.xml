@@ -7,9 +7,8 @@
   <component name="ChangeListManager">
     <list default="true" id="30523737-2344-462a-941d-bd175a3663aa" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Leasy.API/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Leasy.API/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/Resources/ReportResource.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/Resources/ReportResource.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/Resources/SaveReportResource.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/Resources/SaveReportResource.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reports/Domain/Models/Report.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/Domain/Models/Report.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reports/Services/ReportService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/Services/ReportService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Shared/Persistence/Contexts/AppDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Shared/Persistence/Contexts/AppDbContext.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -87,7 +86,10 @@
       <workItem from="1666834026941" duration="910000" />
       <workItem from="1666889276388" duration="665000" />
       <workItem from="1666910071425" duration="6851000" />
-      <workItem from="1666972140101" duration="6197000" />
+      <workItem from="1666972140101" duration="7061000" />
+      <workItem from="1667269405744" duration="628000" />
+      <workItem from="1667526046371" duration="1207000" />
+      <workItem from="1667578916626" duration="298000" />
     </task>
     <servers />
   </component>
