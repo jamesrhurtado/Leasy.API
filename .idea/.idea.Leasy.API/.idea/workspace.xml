@@ -6,7 +6,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="30523737-2344-462a-941d-bd175a3663aa" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Users/Controllers/UserReportsController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Leasy.API/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Leasy.API/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reports/Domain/Repositories/IReportRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/Domain/Repositories/IReportRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reports/Domain/Services/IReportService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/Domain/Services/IReportService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reports/Persistence/Repositories/ReportRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/Persistence/Repositories/ReportRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reports/Services/ReportService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/Services/ReportService.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +84,14 @@
       <workItem from="1666294427045" duration="1431000" />
       <workItem from="1666400220484" duration="3681000" />
       <workItem from="1666463087351" duration="10918000" />
-      <workItem from="1666737141210" duration="2555000" />
+      <workItem from="1666737141210" duration="3673000" />
+      <workItem from="1666834026941" duration="910000" />
+      <workItem from="1666889276388" duration="665000" />
+      <workItem from="1666910071425" duration="6851000" />
+      <workItem from="1666972140101" duration="7061000" />
+      <workItem from="1667269405744" duration="628000" />
+      <workItem from="1667526046371" duration="1207000" />
+      <workItem from="1667578916626" duration="1529000" />
     </task>
     <servers />
   </component>
