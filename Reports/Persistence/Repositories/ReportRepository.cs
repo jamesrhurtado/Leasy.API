@@ -27,6 +27,11 @@ public class ReportRepository: BaseRepository, IReportRepository
         return await _context.Reports.FindAsync(id);
     }
 
+    public async Task<IEnumerable<Report>> ListByUserIdAsync(int userId)
+    {
+        return await _context.Reports.Where(b => b.UserId == userId).Include(b => b.User).ToListAsync();
+    }
+
     public void Update(Report report)
     {
         _context.Reports.Update(report);

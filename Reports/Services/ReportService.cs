@@ -33,6 +33,11 @@ public class ReportService: IReportService
         return new ReportResponse(existingReport.Result);
     }
 
+    public async Task<IEnumerable<Report>> ListByUserIdAsync(int agencyId)
+    {
+        return await _reportRepository.ListByUserIdAsync(agencyId);
+    }
+
     public async Task<ReportResponse> SaveAsync(Report report)
     {
         try
