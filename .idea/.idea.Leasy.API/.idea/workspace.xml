@@ -6,17 +6,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="30523737-2344-462a-941d-bd175a3663aa" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Users/Controllers/UserReportsController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Leasy.API/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Leasy.API/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/Domain/Repositories/IReportRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/Domain/Repositories/IReportRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/Domain/Services/IReportService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/Domain/Services/IReportService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/Persistence/Repositories/ReportRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/Persistence/Repositories/ReportRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/Services/ReportService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/Services/ReportService.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock://C:/Users/James/UPC/CICLO VI/Finances and Economics/Leasy.API/Reports/Persistence/Repositories/ReportRepository.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
