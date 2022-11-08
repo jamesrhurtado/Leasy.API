@@ -89,8 +89,11 @@ builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<IUserSettingsService, UserSettingsService>();
+builder.Services.AddScoped<IUserSettingsRepository, UserSettingsRepository>();
 builder.Services.AddScoped<IReportRepository, ReportRepository>();
 builder.Services.AddScoped<IReportService, ReportService>();
+
 
 // Security Injection Configuration
 builder.Services.AddScoped<IJwtHandler, JwtHandler>();
@@ -102,7 +105,8 @@ builder.Services.AddAutoMapper(
     typeof(Leasy.API.Users.Mapping.ModelToResourceProfile),
     typeof(Leasy.API.Users.Mapping.ResourceToModelProfile),
     typeof(Leasy.API.Reports.Mapping.ResourceToModelProfile),
-    typeof(Leasy.API.Reports.Mapping.ResourceToModelProfile));
+    typeof(Leasy.API.Reports.Mapping.ResourceToModelProfile)
+);
 
 
 var app = builder.Build();
