@@ -6,11 +6,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="30523737-2344-462a-941d-bd175a3663aa" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Users/Controllers/UserSettingsController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Leasy.API/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Leasy.API/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/Domain/Services/IReportService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/Domain/Services/IReportService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reports/Services/ReportService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/Services/ReportService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Users/Domain/Services/IUserSettingsService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Users/Domain/Services/IUserSettingsService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Users/Services/UserSettingsService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Users/Services/UserSettingsService.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +90,7 @@
       <workItem from="1667578916626" duration="1529000" />
       <workItem from="1667583671230" duration="1788000" />
       <workItem from="1667762907276" duration="3228000" />
-      <workItem from="1667881414949" duration="2995000" />
+      <workItem from="1667881414949" duration="4550000" />
     </task>
     <servers />
   </component>
