@@ -1,4 +1,5 @@
-﻿using Leasy.API.Shared.Domain.Repositories;
+﻿using Leasy.API.Reports.Domain.Services.Communication;
+using Leasy.API.Shared.Domain.Repositories;
 using Leasy.API.Users.Domain.Models;
 using Leasy.API.Users.Domain.Repositories;
 using Leasy.API.Users.Domain.Services;
@@ -26,7 +27,23 @@ public class UserSettingsService: IUserSettingsService
 
     public async Task<UserSettingsResponse> GetById(int id)
     {
-        throw new NotImplementedException();
+        var existingUserSettings = _userSettingsRepository.FindByIdAsync(id);
+        if (existingUserSettings.Result == null)
+        {
+            return new UserSettingsResponse("The settings do not exist.");   
+        }
+
+        return new UserSettingsResponse(existingUserSettings.Result);
+    }
+
+    public async Task<UserSettingsResponse> GetByUserId(int userId)
+    {
+        var existingUserSettings = _userSettingsRepository.FindByUserIdAsync(userId);
+        if (existingUserSettings.Result == null)
+        {
+            return new UserSettingsResponse("The settings do not exist.");   
+        }
+        return new UserSettingsResponse(existingUserSettings.Result);
     }
 
     public async Task<UserSettingsResponse> SaveAsync(UserSettings userSettings)
@@ -46,31 +63,45 @@ public class UserSettingsService: IUserSettingsService
 
     public async Task<UserSettingsResponse> UpdateAsync(int id, UserSettings userSettings)
     {
-        /*
+  
         var existingUserSettings = await _userSettingsRepository.FindByIdAsync(id);
 
-        if (existingCategory == null)
-            return new CategoryResponse("Category not found.");
+        if (existingUserSettings == null)
+            return new UserSettingsResponse("User Settings not found.");
 
-        existingCategory.Name = category.Name;
+        existingUserSettings.Currency = userSettings.Currency;
+        existingUserSettings.DaysPerYear = userSettings.DaysPerYear;
+        existingUserSettings.ValueAddedTax = userSettings.ValueAddedTax;
+        existingUserSettings.IncomeTax = userSettings.IncomeTax;
 
         try
         {
-            _categoryRepository.Update(existingCategory);
+            _userSettingsRepository.Update(existingUserSettings);
             await _unitOfWork.CompleteAsync();
 
-            return new CategoryResponse(existingCategory);
+            return new UserSettingsResponse(existingUserSettings);
         }
         catch (Exception e)
         {
-            return new CategoryResponse($"An error occurred while updating the category: {e.Message}");
+            return new UserSettingsResponse($"An error occurred while updating the settings: {e.Message}");
         }
-        */
-        return null;
+
     }
 
     public async Task<UserSettingsResponse> DeleteAsync(int id)
     {
-        throw new NotImplementedException();
+        var existingUserSettings = await _userSettingsRepository.FindByIdAsync(id);
+        if (existingUserSettings == null)
+            return new UserSettingsResponse("User Settings not found");
+        try
+        {
+            _userSettingsRepository.Remove(existingUserSettings);
+            await _unitOfWork.CompleteAsync();
+            return new UserSettingsResponse(existingUserSettings);
+        }
+        catch (Exception e)
+        {
+            return new UserSettingsResponse($"An error occurred while deleting the settings: {e.Message}");
+        }
     }
 }

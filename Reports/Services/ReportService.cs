@@ -33,9 +33,9 @@ public class ReportService: IReportService
         return new ReportResponse(existingReport.Result);
     }
 
-    public async Task<IEnumerable<Report>> ListByUserIdAsync(int agencyId)
+    public async Task<IEnumerable<Report>> ListByUserIdAsync(int userId)
     {
-        return await _reportRepository.ListByUserIdAsync(agencyId);
+        return await _reportRepository.ListByUserIdAsync(userId);
     }
 
     public async Task<ReportResponse> SaveAsync(Report report)
