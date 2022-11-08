@@ -5,6 +5,7 @@ namespace Leasy.API.Users.Resources;
 public class SaveUserSettingsResource
 {
     [Required]
+    [MaxLength(3)]
     public string Currency { get; set; }
     
     [Required]

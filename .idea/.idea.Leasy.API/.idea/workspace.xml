@@ -6,7 +6,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="30523737-2344-462a-941d-bd175a3663aa" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Users/Domain/Repositories/IUserSettingsRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Users/Persistence/Repositories/UserSettingsRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Users/Services/UserSettingsService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Leasy.API/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Leasy.API/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shared/Persistence/Contexts/AppDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Shared/Persistence/Contexts/AppDbContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Users/Domain/Models/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Users/Domain/Models/User.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Users/Resources/SaveUserSettingsResource.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Users/Resources/SaveUserSettingsResource.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +94,8 @@
       <workItem from="1667526046371" duration="1207000" />
       <workItem from="1667578916626" duration="1529000" />
       <workItem from="1667583671230" duration="1788000" />
-      <workItem from="1667762907276" duration="285000" />
+      <workItem from="1667762907276" duration="3228000" />
+      <workItem from="1667881414949" duration="2197000" />
     </task>
     <servers />
   </component>

@@ -10,6 +10,7 @@ public class AppDbContext: DbContext
 {
     public DbSet<User> Users { get; set; }
     public DbSet<Report> Reports { get; set; }
+    public DbSet<UserSettings> UserSettings { get; set; }
     protected readonly IConfiguration _configuration;
 
     public AppDbContext(DbContextOptions options, IConfiguration configuration) : base(options)
@@ -24,6 +25,7 @@ public class AppDbContext: DbContext
         //Users
         //Constraints
         builder.Entity<User>().ToTable("Users");
+        builder.Entity<User>().HasKey(p => p.Id);
         builder.Entity<User>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
         builder.Entity<User>().Property(p => p.Email).IsRequired().HasMaxLength(250);
         builder.Entity<User>().Property(p => p.Name).IsRequired().HasMaxLength(50);
@@ -35,7 +37,22 @@ public class AppDbContext: DbContext
             .WithOne(p => p.User)
             .HasForeignKey(p => p.UserId);
         
+        builder.Entity<User>()
+            .HasOne(p => p.UserSettings)
+            .WithOne(p => p.User)
+            .HasForeignKey<UserSettings>(p => p.UserId);
         
+        //User Settings
+        builder.Entity<UserSettings>().ToTable("UserSettings");
+        builder.Entity<UserSettings>().HasKey(p => p.Id);
+        builder.Entity<UserSettings>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
+        builder.Entity<UserSettings>().Property(p => p.Currency).IsRequired().HasMaxLength(3);
+        builder.Entity<UserSettings>().Property(p => p.DaysPerYear).IsRequired();
+        builder.Entity<UserSettings>().Property(p => p.ValueAddedTax).IsRequired();        
+        builder.Entity<UserSettings>().Property(p => p.IncomeTax).IsRequired();
+
+        //Relationships
+
         //Reports
         //Constraints
         builder.Entity<Report>().ToTable("Reports");
