@@ -4,6 +4,7 @@ using Leasy.API.Reports.Domain.Services;
 using Leasy.API.Reports.Resources;
 using Leasy.API.Shared.Extensions;
 using Microsoft.AspNetCore.Mvc;
+using Swashbuckle.AspNetCore.Annotations;
 
 namespace Leasy.API.Reports.Controllers;
 
@@ -22,6 +23,10 @@ public class ReportsController: ControllerBase
     }
     
     [HttpGet]
+    [SwaggerOperation(
+        Summary = "Get All reports",
+        Description = "Get all reports already stored",
+        Tags = new[] {"Reports"})]
     public async Task<IEnumerable<ReportResource>> GetAllAsync()
     {
         var reports = await _reportService.ListAsync();
@@ -30,6 +35,10 @@ public class ReportsController: ControllerBase
     }
     
     [HttpGet("{id}")]
+    [SwaggerOperation(
+        Summary = "Get Report By Id",
+        Description = "Get a report from the database identified by its id.",
+        Tags = new[] {"Reports"})]
     public async Task<IActionResult> GetByIdAsync(int id)
     {
         var result = await _reportService.GetById(id);
@@ -40,6 +49,10 @@ public class ReportsController: ControllerBase
     }
     
     [HttpPost]
+    [SwaggerOperation(
+        Summary = "Register A Report",
+        Description = "Add a report to a service in the database.",
+        Tags = new[] {"Reports"})]
     public async Task<IActionResult> PostAsync([FromBody] SaveReportResource resource)
     {
         if (!ModelState.IsValid)
@@ -57,6 +70,10 @@ public class ReportsController: ControllerBase
     }
     
     [HttpPut("{id}")]
+    [SwaggerOperation(
+        Summary = "Edit a report",
+        Description = "Edit a report in the database.",
+        Tags = new[] {"Reports"})]
     public async Task<IActionResult> PutAsync(int id, [FromBody] SaveReportResource resource)
     {
         if (!ModelState.IsValid)
@@ -75,6 +92,10 @@ public class ReportsController: ControllerBase
     }
 
     [HttpDelete("{id}")]
+    [SwaggerOperation(
+        Summary = "Delete a report",
+        Description = "Delete a report in the database.",
+        Tags = new[] {"Reports"})]
     public async Task<IActionResult> DeleteAsync(int id)
     {
         var result = await _reportService.DeleteAsync(id);
