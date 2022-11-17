@@ -67,6 +67,7 @@ public class ReportService: IReportService
         existingReport.PaymentFrequency = report.PaymentFrequency;
         existingReport.RateType = report.RateType;
         existingReport.RateValue = report.RateValue;
+        existingReport.RateFrequency = report.RateFrequency;
         existingReport.Capitalization = report.Capitalization;
         existingReport.Buyback = report.Buyback;
         existingReport.NotaryFees = report.NotaryFees;

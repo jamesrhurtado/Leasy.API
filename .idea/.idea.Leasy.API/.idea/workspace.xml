@@ -8,6 +8,14 @@
     <list default="true" id="30523737-2344-462a-941d-bd175a3663aa" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Leasy.API/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Leasy.API/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reports/Domain/Models/Report.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/Domain/Models/Report.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reports/Resources/ReportResource.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/Resources/ReportResource.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reports/Resources/SaveReportResource.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/Resources/SaveReportResource.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reports/Services/ReportService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/Services/ReportService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shared/Persistence/Contexts/AppDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Shared/Persistence/Contexts/AppDbContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Users/Controllers/UserSettingsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Users/Controllers/UserSettingsController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Users/Controllers/UsersController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Users/Controllers/UsersController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/appsettings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,16 +34,52 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.SQL",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RunManager" selected=".NET Launch Settings Profile.Leasy.API">
+}]]></component>
+  <component name="RunManager" selected="Azure - Publish Web App.Publish Leasy.API to Azure">
+    <configuration name="Publish Leasy.API to Azure" type="AzureDotNetWebAppPublish" factoryName="Azure Web App">
+      <option name="AZURE_WEB_APP_PROJECT" value="$PROJECT_DIR$/Leasy.API.csproj" />
+      <option name="AZURE_WEB_APP_SUBSCRIPTION_ID" value="87e8920d-59c0-4c21-bf1c-eec16fa4bebd" />
+      <option name="AZURE_WEB_APP_IS_CREATE_APP" value="0" />
+      <option name="AZURE_WEB_APP_ID" value="/subscriptions/87e8920d-59c0-4c21-bf1c-eec16fa4bebd/resourceGroups/Finances/providers/Microsoft.Web/sites/leasyupc" />
+      <option name="AZURE_WEB_APP_NAME" value="" />
+      <option name="AZURE_WEB_APP_IS_CREATE_RESOURCE_GROUP" value="0" />
+      <option name="AZURE_WEB_APP_RESOURCE_GROUP_NAME" value="" />
+      <option name="AZURE_WEB_APP_OPERATING_SYSTEM" value="WINDOWS" />
+      <option name="AZURE_WEB_APP_IS_CREATE_APP_SERVICE_PLAN" value="0" />
+      <option name="AZURE_WEB_APP_SERVICE_PLAN_ID" value="" />
+      <option name="AZURE_WEB_APP_SERVICE_PLAN_NAME" value="" />
+      <option name="AZURE_WEB_APP_LOCATION" value="eastus" />
+      <option name="AZURE_WEB_APP_PRICING_TIER" value="" />
+      <option name="AZURE_WEB_APP_NET_FRAMEWORK" value="4.7" />
+      <option name="AZURE_WEB_APP_NET_CORE_RUNTIME" value="DOTNETCORE 2.1" />
+      <option name="AZURE_WEB_APP_IS_DEPLOY_TO_SLOT" value="0" />
+      <option name="AZURE_WEB_APP_SLOT_NAME" value="" />
+      <option name="AZURE_WEB_APP_OPEN_BROWSER_PUBLISH" value="0" />
+      <option name="AZURE_SQL_DATABASE_SUBSCRIPTION_ID" value="87e8920d-59c0-4c21-bf1c-eec16fa4bebd" />
+      <option name="AZURE_SQL_DATABASE_IS_ENABLED" value="0" />
+      <option name="AZURE_SQL_DATABASE_CONNECTION_STRING_NAME" value="" />
+      <option name="AZURE_SQL_DATABASE_IS_CREATE" value="0" />
+      <option name="AZURE_SQL_DATABASE_ID" value="" />
+      <option name="AZURE_SQL_DATABASE_NAME" value="" />
+      <option name="AZURE_SQL_DATABASE_IS_CREATE_RESOURCE_GROUP" value="0" />
+      <option name="AZURE_SQL_DATABASE_RESOURCE_GROUP_NAME" value="" />
+      <option name="AZURE_SQL_DATABASE_IS_CREATE_SQL_SERVER" value="0" />
+      <option name="AZURE_SQL_DATABASE_SQL_SERVER_ID" value="" />
+      <option name="AZURE_SQL_DATABASE_SQL_SERVER_NAME" value="" />
+      <option name="AZURE_SQL_DATABASE_SQL_SERVER_ADMIN_LOGIN" value="N/A" />
+      <option name="AZURE_SQL_DATABASE_LOCATION" value="eastus" />
+      <option name="AZURE_SQL_DATABASE_COLLATION" value="SQL_Latin1_General_CP1_CI_AS" />
+      <method v="2" />
+    </configuration>
     <configuration name="Leasy.API" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/Leasy.API.csproj" />
       <option name="LAUNCH_PROFILE_TFM" value="net6.0" />
@@ -90,7 +134,12 @@
       <workItem from="1667578916626" duration="1529000" />
       <workItem from="1667583671230" duration="1788000" />
       <workItem from="1667762907276" duration="3228000" />
-      <workItem from="1667881414949" duration="11329000" />
+      <workItem from="1667881414949" duration="11457000" />
+      <workItem from="1668007856836" duration="4426000" />
+      <workItem from="1668373178573" duration="1542000" />
+      <workItem from="1668473019635" duration="1809000" />
+      <workItem from="1668628594894" duration="5125000" />
+      <workItem from="1668638602399" duration="4364000" />
     </task>
     <servers />
   </component>
@@ -124,5 +173,28 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Reports/Services/ReportService.cs</url>
+          <line>68</line>
+          <properties documentPath="C:\Users\James\UPC\CICLO VI\Finances and Economics\Leasy.API\Reports\Services\ReportService.cs" initialLine="68" containingFunctionPresentation="method 'UpdateAsync'">
+            <startOffsets>
+              <option value="2106" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2150" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

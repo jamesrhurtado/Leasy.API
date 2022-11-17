@@ -62,6 +62,7 @@ public class AppDbContext: DbContext
         builder.Entity<Report>().Property(p => p.LeasingYears).IsRequired();
         builder.Entity<Report>().Property(p => p.PaymentFrequency).IsRequired();
         builder.Entity<Report>().Property(p => p.RateType).IsRequired();
+        builder.Entity<Report>().Property(p => p.RateFrequency).IsRequired();
         builder.Entity<Report>().Property(p => p.RateValue).IsRequired();
         builder.Entity<Report>().Property(p => p.Capitalization);
         builder.Entity<Report>().Property(p => p.Buyback);

@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Leasy.API.Users.Controllers;
 
-[Route("api/v1/users/[controller]")]
+[Route("api/v1/users/settings")]
 public class UserSettingsController: ControllerBase
 {
     private readonly IUserSettingsService _userSettingsService;
