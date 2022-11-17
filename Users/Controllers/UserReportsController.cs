@@ -3,6 +3,7 @@ using Leasy.API.Reports.Domain.Models;
 using Leasy.API.Reports.Domain.Services;
 using Leasy.API.Reports.Resources;
 using Microsoft.AspNetCore.Mvc;
+using Swashbuckle.AspNetCore.Annotations;
 
 namespace Leasy.API.Users.Controllers;
 
@@ -19,6 +20,10 @@ public class UserReportsController : ControllerBase
     }
     
     [HttpGet]
+    [SwaggerOperation(
+        Summary = "Get All Reports By User",
+        Description = "Get all reports for a given UserId",
+        Tags = new[] {"Reports"})]
     public async Task<IEnumerable<ReportResource>>GetAllByUserId(int userId)
     {
         var reports = await _reportService.ListByUserIdAsync(userId);

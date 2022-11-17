@@ -3,6 +3,7 @@ using Leasy.API.Users.Domain.Models;
 using Leasy.API.Users.Domain.Services;
 using Leasy.API.Users.Resources;
 using Microsoft.AspNetCore.Mvc;
+using Swashbuckle.AspNetCore.Annotations;
 
 namespace Leasy.API.Users.Controllers;
 
@@ -19,6 +20,10 @@ public class UserUserSettingsController: ControllerBase
     }
     
     [HttpGet]
+    [SwaggerOperation(
+        Summary = "Get All Settings For A User",
+        Description = "Get the settings for a given UserId",
+        Tags = new[] {"Settings"})]
     public async Task<IActionResult> GetByUserId(int userId)
     {
         var userSettings = await _userSettingsService.GetByUserId(userId);

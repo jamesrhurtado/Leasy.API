@@ -6,8 +6,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="30523737-2344-462a-941d-bd175a3663aa" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Leasy.API/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Leasy.API/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reports/Controllers/ReportsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/Controllers/ReportsController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Users/Controllers/UserReportsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Users/Controllers/UserReportsController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Users/Controllers/UserSettingsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Users/Controllers/UserSettingsController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

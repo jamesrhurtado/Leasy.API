@@ -4,6 +4,7 @@ using Leasy.API.Users.Domain.Models;
 using Leasy.API.Users.Domain.Services;
 using Leasy.API.Users.Resources;
 using Microsoft.AspNetCore.Mvc;
+using Swashbuckle.AspNetCore.Annotations;
 
 namespace Leasy.API.Users.Controllers;
 
@@ -20,6 +21,10 @@ public class UserSettingsController: ControllerBase
     }
     
     [HttpGet("{id}")]
+    [SwaggerOperation(
+        Summary = "Get Settings By Id",
+        Description = "Get a settings data already stored.",
+        Tags = new[] {"Settings"})]
     public async Task<IActionResult> GetByIdAsync(int id)
     {
         var result = await _userSettingsService.GetById(id);
@@ -30,6 +35,10 @@ public class UserSettingsController: ControllerBase
     }
     
     [HttpPost]
+    [SwaggerOperation(
+        Summary = "Record Settings For A User",
+        Description = "Record the settings for a given User",
+        Tags = new[] {"Settings"})]
     public async Task<IActionResult> PostAsync([FromBody] SaveUserSettingsResource resource)
     {
         if (!ModelState.IsValid)
@@ -46,6 +55,10 @@ public class UserSettingsController: ControllerBase
         return Ok(userSettingsResource);
     }
     
+    [SwaggerOperation(
+        Summary = "Update Settings For A User",
+        Description = "Update the settings for a given User",
+        Tags = new[] {"Settings"})]
     [HttpPut("{id}")]
     public async Task<IActionResult> PutAsync(int id, [FromBody] SaveUserSettingsResource resource)
     {
@@ -65,6 +78,10 @@ public class UserSettingsController: ControllerBase
     }
     
     [HttpDelete("{id}")]
+    [SwaggerOperation(
+        Summary = "Delete Settings For A User",
+        Description = "Delete the settings for a given User",
+        Tags = new[] {"Settings"})]
     public async Task<IActionResult> DeleteAsync(int id)
     {
         var result = await _userSettingsService.DeleteAsync(id);
