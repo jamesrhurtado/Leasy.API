@@ -33,9 +33,9 @@ public class ReportService: IReportService
         return new ReportResponse(existingReport.Result);
     }
 
-    public async Task<IEnumerable<Report>> ListByUserIdAsync(int agencyId)
+    public async Task<IEnumerable<Report>> ListByUserIdAsync(int userId)
     {
-        return await _reportRepository.ListByUserIdAsync(agencyId);
+        return await _reportRepository.ListByUserIdAsync(userId);
     }
 
     public async Task<ReportResponse> SaveAsync(Report report)
@@ -67,6 +67,7 @@ public class ReportService: IReportService
         existingReport.PaymentFrequency = report.PaymentFrequency;
         existingReport.RateType = report.RateType;
         existingReport.RateValue = report.RateValue;
+        existingReport.RateFrequency = report.RateFrequency;
         existingReport.Capitalization = report.Capitalization;
         existingReport.Buyback = report.Buyback;
         existingReport.NotaryFees = report.NotaryFees;

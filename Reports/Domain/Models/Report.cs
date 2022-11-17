@@ -9,6 +9,7 @@ public class Report
     public int LeasingYears { get; set; }
     public string PaymentFrequency { get; set; }
     public string RateType { get; set; }
+    public string RateFrequency { get; set; }
     public string Capitalization { get; set; }
     public decimal RateValue { get; set; }
     public decimal Buyback { get; set; }

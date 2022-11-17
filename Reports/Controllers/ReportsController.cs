@@ -45,15 +45,15 @@ public class ReportsController: ControllerBase
         if (!ModelState.IsValid)
             return BadRequest(ModelState.GetErrorMessages());
 
-        var service = _mapper.Map<SaveReportResource, Report>(resource);
-        var result = await _reportService.SaveAsync(service);
+        var report = _mapper.Map<SaveReportResource, Report>(resource);
+        var result = await _reportService.SaveAsync(report);
 
         if (!result.Success)
             return BadRequest(result.Message);
             
-        var serviceResource = _mapper.Map<Report, ReportResource>(result.Resource);
+        var reportResource = _mapper.Map<Report, ReportResource>(result.Resource);
 
-        return Ok(serviceResource);
+        return Ok(reportResource);
     }
     
     [HttpPut("{id}")]
@@ -62,16 +62,16 @@ public class ReportsController: ControllerBase
         if (!ModelState.IsValid)
             return BadRequest(ModelState.GetErrorMessages());
         
-        var category = _mapper.Map<SaveReportResource, Report>(resource);
+        var report = _mapper.Map<SaveReportResource, Report>(resource);
 
-        var result = await _reportService.UpdateAsync(id, category);
+        var result = await _reportService.UpdateAsync(id, report);
         
         if (!result.Success)
             return BadRequest(result.Message);
 
-        var categoryResource = _mapper.Map<Report, ReportResource>(result.Resource);
+        var reportResource = _mapper.Map<Report, ReportResource>(result.Resource);
 
-        return Ok(categoryResource);
+        return Ok(reportResource);
     }
 
     [HttpDelete("{id}")]
@@ -82,9 +82,9 @@ public class ReportsController: ControllerBase
         if (!result.Success)
             return BadRequest(result.Message);
 
-        var categoryResource = _mapper.Map<Report, ReportResource>(result.Resource);
+        var reportResource = _mapper.Map<Report, ReportResource>(result.Resource);
 
-        return Ok(categoryResource);
+        return Ok(reportResource);
     }
 
 }

@@ -20,5 +20,6 @@ public class ResourceToModelProfile: Profile
                     return true;
                 }
             ));
+        CreateMap<SaveUserSettingsResource, UserSettings>();
     }
 }

@@ -14,4 +14,6 @@ public class User
     
     //Relationships
     public IList<Report> Reports { get; set; }
+    
+    public UserSettings UserSettings { get; set; }
 }
