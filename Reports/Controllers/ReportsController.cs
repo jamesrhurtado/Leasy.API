@@ -8,7 +8,7 @@ using Swashbuckle.AspNetCore.Annotations;
 
 namespace Leasy.API.Reports.Controllers;
 
-
+[Produces("application/json")]
 [ApiController]
 [Route("/api/v1/[controller]")]
 public class ReportsController: ControllerBase

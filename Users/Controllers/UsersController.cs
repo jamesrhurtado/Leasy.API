@@ -86,7 +86,7 @@ public class UsersController: ControllerBase
     [SwaggerOperation(
         Summary = "Delete a user",
         Description = "Delete the data of a stored user given its id",
-        Tags = new[] {"User"})]
+        Tags = new[] {"Users"})]
     public async Task<IActionResult> DeleteAsync(int id)
     {
         await _userService.DeleteAsync(id);

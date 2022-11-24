@@ -6,9 +6,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="30523737-2344-462a-941d-bd175a3663aa" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Leasy.API/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Leasy.API/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Reports/Controllers/ReportsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Reports/Controllers/ReportsController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Users/Controllers/UserReportsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Users/Controllers/UserReportsController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Users/Controllers/UserSettingsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Users/Controllers/UserSettingsController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Users/Controllers/UserUserSettingsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Users/Controllers/UserUserSettingsController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Users/Controllers/UsersController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Users/Controllers/UsersController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Users/Persistence/Repositories/UserRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Users/Persistence/Repositories/UserRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Users/Services/UserService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Users/Services/UserService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/appsettings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,7 +25,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
+    <option name="selectedTabId" value="Toolset" />
   </component>
   <component name="ProjectId" id="2GCO2lUDd1qFhKVVNLvfd6wtrJD" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -40,7 +46,7 @@
   <component name="RunManager" selected="Azure - Publish Web App.Publish Leasy.API to Azure">
     <configuration name="Publish Leasy.API to Azure" type="AzureDotNetWebAppPublish" factoryName="Azure Web App">
       <option name="AZURE_WEB_APP_PROJECT" value="$PROJECT_DIR$/Leasy.API.csproj" />
-      <option name="AZURE_WEB_APP_SUBSCRIPTION_ID" value="87e8920d-59c0-4c21-bf1c-eec16fa4bebd" />
+      <option name="AZURE_WEB_APP_SUBSCRIPTION_ID" value="" />
       <option name="AZURE_WEB_APP_IS_CREATE_APP" value="0" />
       <option name="AZURE_WEB_APP_ID" value="/subscriptions/87e8920d-59c0-4c21-bf1c-eec16fa4bebd/resourceGroups/Finances/providers/Microsoft.Web/sites/leasyupc" />
       <option name="AZURE_WEB_APP_NAME" value="" />
@@ -57,7 +63,7 @@
       <option name="AZURE_WEB_APP_IS_DEPLOY_TO_SLOT" value="0" />
       <option name="AZURE_WEB_APP_SLOT_NAME" value="" />
       <option name="AZURE_WEB_APP_OPEN_BROWSER_PUBLISH" value="0" />
-      <option name="AZURE_SQL_DATABASE_SUBSCRIPTION_ID" value="87e8920d-59c0-4c21-bf1c-eec16fa4bebd" />
+      <option name="AZURE_SQL_DATABASE_SUBSCRIPTION_ID" value="" />
       <option name="AZURE_SQL_DATABASE_IS_ENABLED" value="0" />
       <option name="AZURE_SQL_DATABASE_CONNECTION_STRING_NAME" value="" />
       <option name="AZURE_SQL_DATABASE_IS_CREATE" value="0" />
@@ -133,6 +139,9 @@
       <workItem from="1668473019635" duration="1809000" />
       <workItem from="1668628594894" duration="5125000" />
       <workItem from="1668638602399" duration="4364000" />
+      <workItem from="1668737555154" duration="243000" />
+      <workItem from="1669054145142" duration="1925000" />
+      <workItem from="1669157489815" duration="613000" />
     </task>
     <servers />
   </component>

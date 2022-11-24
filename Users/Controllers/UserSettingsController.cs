@@ -8,6 +8,8 @@ using Swashbuckle.AspNetCore.Annotations;
 
 namespace Leasy.API.Users.Controllers;
 
+[Produces("application/json")]
+[ApiController]
 [Route("api/v1/users/settings")]
 public class UserSettingsController: ControllerBase
 {
