@@ -30,7 +30,7 @@ public class UserRepository: BaseRepository, IUserRepository
 
     public async Task<User> FindByEmailAsync(string email)
     {
-        return await _context.Users.SingleOrDefaultAsync(x => x.Email == email);
+        return await _context.Users.SingleOrDefaultAsync(U => U.Email == email);
     }
 
     public bool ExistsByEmail(string email)
